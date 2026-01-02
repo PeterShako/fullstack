@@ -1,0 +1,2 @@
+favouriteMOvieGenre("cowboy")
+favouriteFruit("banana")
