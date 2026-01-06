@@ -6,26 +6,29 @@
   <title>Shako | Portfolio</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { 
+    body {
       font-family: Arial, Helvetica, sans-serif;
       line-height: 1.6;
-      color: #111;
-      background: #f5f5f5;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #f8fafc;
     }
+
     header {
-      background: #0f172a;
-      color: #fff;
       padding: 4rem 1rem;
       text-align: center;
+      background: linear-gradient(135deg, #2563eb, #9333ea);
     }
-    header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-    header p { font-size: 1.1rem; opacity: 0.9; }
+
+    header h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+    header p { font-size: 1.2rem; opacity: 0.95; }
     nav {
       background: #020617;
       padding: 0.8rem;
       position: sticky;
       top: 0;
+      z-index: 10;
     }
+    
     nav ul {
       list-style: none;
       display: flex;
@@ -33,46 +36,85 @@
       gap: 1.5rem;
     }
     nav a {
-      color: #fff;
+      color: #38bdf8;
       text-decoration: none;
       font-weight: bold;
     }
+    nav a:hover { text-decoration: underline; }
     section {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
       padding: 4rem 1rem;
     }
     h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #020617;
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+      color: #38bdf8;
     }
-    .about, .skills, .projects, .contact {
-      background: #fff;
-      margin-bottom: 2rem;
+    .card {
+      background: rgba(255,255,255,0.08);
       padding: 2rem;
-      border-radius: 8px;
+      border-radius: 14px;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
     }
+    .about p { font-size: 1.05rem; }
     .skills ul {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
       gap: 1rem;
       list-style: none;
     }
     .skills li {
-      background: #e5e7eb;
-      padding: 0.7rem;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      padding: 0.8rem;
       text-align: center;
-      border-radius: 4px;
+      border-radius: 8px;
       font-weight: bold;
+      color: #022c22;
+    }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
     }
     .project {
-      margin-bottom: 1.5rem;
+      background: #020617;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+      transition: transform 0.3s ease;
     }
-    .project h3 { margin-bottom: 0.3rem; }
-    .project p { opacity: 0.85; }
+    .project:hover { transform: translateY(-6px); }
+    .project img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .project-content {
+      padding: 1.2rem;
+    }
+    .project-content h3 {
+      margin-bottom: 0.5rem;
+      color: #facc15;
+    }
+    .project-content p {
+      font-size: 0.95rem;
+      opacity: 0.9;
+      margin-bottom: 1rem;
+    }
+    .project-content a {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: #ef4444;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+    .project-content a:hover { opacity: 0.85; }
     .contact a {
-      color: #2563eb;
+      color: #38bdf8;
       text-decoration: none;
       font-weight: bold;
     }
@@ -80,7 +122,7 @@
       text-align: center;
       padding: 2rem;
       background: #020617;
-      color: #fff;
+      color: #94a3b8;
     }
   </style>
 </head>
@@ -88,54 +130,77 @@
 
   <header>
     <h1>Shako</h1>
-    <p>Broadcast Production Student | Programmer | Creative Storyteller</p>
+    <p>Broadcast Production Student | Programmer | Visual Storyteller</p>
   </header>
 
   <nav>
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
+      <li><a href="#projects">Stories</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <section id="about" class="about">
+  <section id="about" class="card about">
     <h2>About Me</h2>
     <p>
-      I am a broadcast production undergraduate with a strong interest in technology, storytelling, and problem solving. I work across media production and software development, combining technical thinking with creative execution.
+      I’m a broadcast production undergraduate with a strong focus on visual storytelling, journalism, and digital media. I produce short documentaries and TV stories, blending solid editorial judgment with clean technical execution.
     </p>
   </section>
 
-  <section id="skills" class="skills">
+  <section id="skills" class="card skills">
     <h2>Skills</h2>
     <ul>
-      <li>C</li>
+      <li>Video Production</li>
+      <li>TV Storytelling</li>
+      <li>Camera Operation</li>
+      <li>Video Editing</li>
+      <li>Broadcast Operations</li>
       <li>Python</li>
       <li>JavaScript</li>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>MySQL</li>
-      <li>Video Production</li>
-      <li>Broadcast Operations</li>
+      <li>HTML & CSS</li>
     </ul>
   </section>
 
-  <section id="projects" class="projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Student TV Show Production</h3>
-      <p>Produced and coordinated student-led TV shows for campus television, handling planning, shooting, and post-production.</p>
-    </div>
-    <div class="project">
-      <h3>Personal Coding Projects</h3>
-      <p>Built small applications and scripts while learning programming fundamentals and full-stack concepts.</p>
+  <section id="projects">
+    <h2>Produced Stories</h2>
+    <div class="projects-grid">
+
+      <div class="project">
+        <img src="https://i.ytimg.com/vi/F3Bf51S9wNw/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDhJqevONsPdd5-m2QQdSSy6Q_C_w" alt="Story thumbnail">
+        <div class="project-content">
+          <h3>Campus Feature Story</h3>
+          <p>A short documentary highlighting student life and challenges on campus.</p>
+          <a href="https://www.youtube.com/" target="_blank">Watch on YouTube</a>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="https://via.placeholder.com/600x400.png?text=Story+2" alt="Story thumbnail">
+        <div class="project-content">
+          <h3>Human Interest Story</h3>
+          <p>A character-driven story focusing on everyday resilience and hope.</p>
+          <a href="https://www.youtube.com/" target="_blank">Watch on YouTube</a>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="https://via.placeholder.com/600x400.png?text=Story+3" alt="Story thumbnail">
+        <div class="project-content">
+          <h3>News Package</h3>
+          <p>A concise TV news package produced under real broadcast deadlines.</p>
+          <a href="https://www.youtube.com/" target="_blank">Watch on YouTube</a>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <section id="contact" class="contact">
+  <section id="contact" class="card contact">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:yourname@email.com">yourname@email.com</a></p>
+    <p>YouTube: <a href="https://www.youtube.com/" target="_blank">My Channel</a></p>
     <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
   </section>
 
